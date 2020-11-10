@@ -1,0 +1,51 @@
+
+    
+//HEADER
+
+.banner__wrapper
+    width:auto
+
+
+.banner__wrapper::before
+    content: " "
+    display: inline-block
+    width: 50px
+    height: 5px
+    background-color: black
+    border-radius: 2px
+    margin-right: 13px
+    transition: transform .4s
+    
+
+.banner__wrapper::after
+    content: " "
+    display: inline-block
+    width: 50px
+    height: 5px
+    background-color: black
+    border-radius: 2px
+    margin-left: 13px
+    transition: transform .4s
+
+.banner__wrapper:hover::before
+    transform: translateX(-15px)
+
+.banner__wrapper:hover::after
+    transform: translateX(15px)
+
+
+.banner__wrapper--text
+    font-size: 75px
+
+
+    
+//NAVIGATION
+
+.menu-wrapper
+    height: 80vh
+    width: 80vw
+
+
+.menu-wrapper__tile
+    height: 46%
+    max-width: 46%
