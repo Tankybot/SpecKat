@@ -1,3 +1,36 @@
+//ANIMATIONS 
+@keyframes bounce-left
+    0%
+        transform: translateX(-20px)
+        opacity: 1
+    20%
+        transform: translateX(0px)
+    40%
+        transform: translateX(-7px)
+    60%
+        transform: translateX(0px)
+    80%
+        transform: translateX(-3px)
+    100%
+        transform: translateX(0)
+        opacity: 1
+
+@keyframes bounce-right
+    0%
+        transform: translateX(20px)
+        opacity: 1
+    20%
+        transform: translateX(0px)
+    40%
+        transform: translateX(7px)
+    60%
+        transform: translateX(0px)
+    80%
+        transform: translateX(3px)
+    100%
+        transform: translateX(0)
+        opacity: 1
+
 @keyframes fadein
     0%
         opacity: 0
@@ -9,34 +42,35 @@
 .banner__wrapper
     width:auto
 
-
-.banner__wrapper::before
-    content: " "
-    display: inline-block
+.banner__line-left
     width: 50px
     height: 5px
     background-color: black
     border-radius: 2px
     margin-right: 13px
     transition: transform .4s
-    
+    animation: bounce-left 1s 
+    animation-iteration-count: 1
 
-.banner__wrapper::after
-    content: " "
-    display: inline-block
+
+.banner__line-right
     width: 50px
     height: 5px
     background-color: black
     border-radius: 2px
     margin-left: 13px
     transition: transform .4s
+    animation: bounce-right 1s 
+    animation-iteration-count: 1
 
-.banner__wrapper:hover::before
-    transform: translateX(-15px)
 
-.banner__wrapper:hover::after
-    transform: translateX(15px)
+.banner__wrapper:hover
+    .banner__line-left
+        transform: translateX(-15px)
 
+    .banner__line-right
+        transform: translateX(15px)
+        
 
 .banner__wrapper--text
     font-size: 75px
