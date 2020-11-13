@@ -3,6 +3,11 @@
   100% 
     left: 55rem
 
+@keyframes shine-icon
+  100% 
+    left: 10rem
+
+
 @keyframes bounce-left
     0%
         transform: translateX(-20px)
@@ -35,7 +40,7 @@
         transform: translateX(0)
         opacity: 1
     
-        
+       
 
 *, *::after, *::before 
     box-sizing: border-box
@@ -46,10 +51,16 @@
 
 html
     overflow-x: hidden
+    scroll-behavior: smooth
 
 body
+    position: relative
     background-color: #F0F0F0
-    margin: 0
+    font-family: 'Montserrat', sans-serif
+
+
+
+$bgcolor : #F0F0F0
 
 
 
@@ -65,16 +76,47 @@ body
     margin: 0
     border-bottom: 2px solid lightsteelblue
     
-
-
 .banner__wrapper--icon
-    z-index: 10
+    z-index: 5
     width: 70px
     height: auto
     transform: rotate(90deg)
 
 .banner__wrapper--text
     font-size: 50px
+
+//NAV SCROLL
+
+.nav-scroll
+    background-color: rgba(0, 0, 0, 0.5)
+    z-index: 10
+    backdrop-filter: blur(5px) saturate(1.15)
+    visibility: hidden
+    opacity: 0
+    transition: opacity .3s
+
+.nav-scroll__brand
+    color: white
+    font-size: 20px
+    text-shadow: 0px 0px 15px #111111
+
+.nav-scroll__brand:hover
+    color: lightsteelblue
+
+.nav-scroll__item
+    color: white
+    text-transform: uppercase
+    font-size: 20px
+    text-shadow: 0px 0px 15px #111111
+    transition: color .3s
+
+.nav-scroll__item:hover
+    color: lightsteelblue
+
+.active
+    color: lightsteelblue
+
+
 
 
 // NAV 
@@ -88,19 +130,22 @@ body
     padding: 15px
     margin: 0
 
-.menu-wrapper__tile
+.tile
     position: relative
     display: flex
     align-items: center
     justify-content: center
-    background-color: #fff
     height: 24%
     border-radius: 5px
     box-shadow: 2px 2px 4px 0px lightsteelblue
-    transition: .3s
+    transition: transform .3s
+    will-change: transform
     overflow: hidden
 
-.menu-wrapper__tile::after
+.tile:hover
+    text-decoration: none
+
+.tile::after
     content: ''
     position: absolute
     left: -18rem
@@ -109,16 +154,16 @@ body
     background-color: rgba(255, 255, 255, 0.3)
     transform: skewX(-50deg)
 
-.menu-wrapper__tile:hover::after
+.tile:hover::after
     animation: shine .5s forwards linear
-
-.menu-wrapper__img
+    
+.tile__img
     position: absolute
     object-fit: cover
     width: 100%
     height: 100%
 
-.menu-wrapper__shadow
+.tile__shadow
     position: absolute
     top: 0
     left: 0
@@ -129,7 +174,7 @@ body
     backdrop-filter: blur(5px) saturate(1.15)
     border-radius: 5px
 
-.menu-wrapper__text
+.tile__text
     text-transform: uppercase
     color: white
     font-size: 50px
@@ -144,60 +189,168 @@ body
     flex-direction: column
     align-items: center
     text-align: center
-    
+    margin-bottom: 0
 
-.heading-container
+.heading-aboutus
     margin-right: 0
     margin-left: 0
 
-.heading-container__heading
+.heading-aboutus__heading
     text-transform: uppercase
 
-.heading-container__line-left
+.heading-aboutus__line-left
     width: 50px
     height: 5px
     background-color: black
     border-radius: 2px
     margin-right: 13px
-    opacity: 0
     transition: transform .4s
 
-.heading-container__line-right
+.heading-aboutus__line-right
     width: 50px
     height: 5px
     background-color: black
     border-radius: 2px
     margin-left: 13px
     transition: transform .4s
-    animation: bounce-right 1s 
-    animation-iteration-count: 1
+    // animation: bounce-right 1s 
+    // animation-iteration-count: 1
 
 .tile-container
     margin-top: 50px
     width: 100%
 
-.tile
+.tile-container__tile
     display: flex
     flex-direction: column
     align-items: center
 
 
-.tile__icon
+.tile-container__icon
+    position: relative
     font-size: 48px
     margin-bottom: 28px
     background: -webkit-linear-gradient(32deg, #9dc5c3 0%, #5e5c5c 74%)
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
+    overflow: hidden
+    transition: transform .4s
+    will-change: transform 
 
-.tile__h6
+.tile-container__icon::after
+    content: ''
+    position: absolute
+    left: -6rem
+    height: 4rem
+    width: 1rem
+    background-color: rgba(255, 255, 255, 0.1)
+    transform: skewX(-50deg)
+
+.tile-container__tile:hover
+    .tile-container__icon::after
+        animation: shine-icon 1.5s forwards
+
+    .tile-container__icon
+        transform: scale(1.30)
+
+.tile-container__h6
     font-size: 20px
 
-.tile__p
+.tile-container__p
     text-align: center
     font-size: 18px
     width: 30ch
 
+
+//PRICES
+
+.prices-wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    margin-bottom: 0
+    background-color: $bgcolor
+    border-bottom: 2px solid lightsteelblue
+
+.heading-prices
+    margin-right: 0
+    margin-left: 0
+    margin-bottom: 50px
+
+.heading-prices__heading
+    text-transform: uppercase
+
+.heading-prices__line-left
+    width: 50px
+    height: 5px
+    background-color: black
+    border-radius: 2px
+    margin-right: 13px
+    transition: transform .4s
+
+.heading-prices__line-right
+    width: 50px
+    height: 5px
+    background-color: black
+    border-radius: 2px
+    margin-left: 13px
+    transition: transform .4s
+
+
+// CONTACT
+
+.contact-wrapper
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    margin-bottom: 0
+    background-image: url(../images/car.jpg)
+    background-attachment: fixed
+    background-size: cover
+    height: 50vh
+
+.contact-wrapper__shadow
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.6)
+    z-index: 1
+    backdrop-filter: blur(5px) saturate(1.15)
+
+.heading-contact
+    margin-right: 0
+    margin-left: 0
+    z-index: 10
+
+.heading-contact__heading
+    color: white
+    text-transform: uppercase
+
+.heading-contact__line-left
+    width: 50px
+    height: 5px
+    background-color: white
+    border-radius: 2px
+    margin-right: 13px
+    transition: transform .4s
+
+.heading-contact__line-right
+    width: 50px
+    height: 5px
+    background-color: white
+    border-radius: 2px
+    margin-left: 13px
+    transition: transform .4s
     
+
+// FOOTER
+footer
+    height: 200px
     
 
 

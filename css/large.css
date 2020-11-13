@@ -183,7 +183,7 @@
   width: 80vw;
 }
 
-.menu-wrapper__tile {
+.tile {
   opacity: 0;
   height: 46%;
   max-width: 46%;
@@ -197,12 +197,12 @@
   transition: transform .3s, -webkit-transform .3s;
 }
 
-.menu-wrapper__tile--late-animated {
+.tile--late-animated {
   -webkit-animation-delay: .5s;
           animation-delay: .5s;
 }
 
-.menu-wrapper__tile:hover {
+.tile:hover {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
   -webkit-box-shadow: 2px 2px 8px 5px lightsteelblue;
