@@ -38,30 +38,34 @@
         opacity: 1
     
 //HEADER
+.banner
+    height: 24vh
 
 .banner__wrapper
     width:auto
 
 .banner__line-left
-    width: 50px
+    width: 60px
     height: 5px
     background-color: black
-    border-radius: 2px
-    margin-right: 13px
+    border-radius: 3px
+    margin-right: 16px
     transition: transform .4s
     animation: bounce-left 1s 
     animation-iteration-count: 1
+    z-index: 10
 
 
 .banner__line-right
-    width: 50px
+    width: 60px
     height: 5px
     background-color: black
-    border-radius: 2px
-    margin-left: 13px
+    border-radius: 3px
+    margin-left: 16px
     transition: transform .4s
     animation: bounce-right 1s 
     animation-iteration-count: 1
+    z-index: 10
 
 
 .banner__wrapper:hover
@@ -72,8 +76,8 @@
         transform: translateX(15px)
         
 
-.banner__wrapper--text
-    font-size: 75px
+.banner-wrapper__text
+    font-size: 85px
 
 
     
@@ -86,8 +90,8 @@
 
 .tile
     opacity: 0
-    height: 46%
-    max-width: 46%
+    height: 44%
+    max-width: 44%
     animation: fadein 1s forwards 
     animation-delay: .3s
     transition: transform .3s
@@ -99,3 +103,46 @@
     transform: scale(1.07)
     box-shadow: 2px 2px 8px 5px lightsteelblue
 
+
+// ABOUTUS 
+.heading-aboutus__heading
+    font-size: 40px
+
+//PRICES
+
+.heading-prices__heading
+    font-size: 40px
+
+.content-prices__h3
+    font-size: 24px
+    margin-bottom: 40px
+
+.content-prices__ul
+    position: relative
+    width: 50%
+    left: 45%
+    transform: translateX(-50%)
+    margin-bottom: 50px
+
+//CONTACT
+
+.heading-contact__heading
+    font-size: 40px
+
+
+
+@media screen and (min-height: 1300px)
+
+    .banner
+        height: 10vh
+
+    .menu-wrapper
+        height: 60vh
+
+@media screen and (min-width: 1600px)
+
+    .banner
+        height: 18vh
+
+    .tile-container__tile
+        width: 100%

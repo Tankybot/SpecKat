@@ -1,1 +1,12 @@
-/* No CSS *//*# sourceMappingURL=medium.css.map */
+.banner {
+  height: 15vh;
+}
+
+.banner-wrapper__text {
+  font-size: 60px;
+}
+
+.menu-wrapper {
+  height: 85vh;
+}
+/*# sourceMappingURL=medium.css.map */
