@@ -1,0 +1,54 @@
+.main-bg {
+  height: 80vh;
+}
+
+.menu__h1 {
+  font-size: 46px;
+}
+
+.menu__li {
+  font-size: 22px;
+}
+
+.menu__li:nth-child(3) {
+  font-size: 26px;
+}
+
+.content__text {
+  font-size: 22px;
+}
+
+.footer-container-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer-tile {
+  left: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-tile:nth-child(1) {
+  width: 50%;
+}
+
+.footer-tile:nth-child(2) {
+  width: 50%;
+  margin-top: 20px;
+}
+
+.footer-tile:nth-child(3) {
+  position: relative;
+  margin-top: 10px;
+}
+/*# sourceMappingURL=oferta-medium.css.map */
