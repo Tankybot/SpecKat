@@ -63,19 +63,21 @@
 
 // GLOBAL 
 
+$bgcolor : #F0F0F0
+
 html
     overflow-x: hidden
     scroll-behavior: smooth
 
 body
     position: relative
-    background-color: #F0F0F0
+    background-color: $bgcolor
     font-family: 'Montserrat', sans-serif
     overflow-x: hidden
 
 
 
-$bgcolor : #F0F0F0
+
 
 
 
@@ -94,7 +96,6 @@ $bgcolor : #F0F0F0
     padding: 20px
     background-image: url(../images/back.jpg)
     margin: 0
-    border-bottom: 2px solid lightsteelblue
 
 
 .banner__shadow
@@ -106,7 +107,7 @@ $bgcolor : #F0F0F0
     height: 100%
     z-index: 1
 
-.banner-wrapper__text
+.banner__text
     font-family: 'Black Ops One', cursive
     color: black
     font-size: 55px
@@ -234,6 +235,7 @@ $bgcolor : #F0F0F0
 .heading-aboutus
     margin-right: 0
     margin-left: 0
+    margin-top: 20px
 
 .heading-aboutus__heading
     font-size: 32px
@@ -430,6 +432,7 @@ $bgcolor : #F0F0F0
     background-image: url(../images/car.jpg)
     background-attachment: fixed
     background-size: cover
+    background-position-x: center
     height: 100%
 
 .contact-wrapper-top__shadow
@@ -547,14 +550,18 @@ $bgcolor : #F0F0F0
     margin-top: 40px
 
 // FOOTER
+.footer
+    background-color: #e9ecef
 
 .footer-tile
+    position: relative
     display: flex   
-    left: 45%
-    transform: translateX(-50%)
+    left: 50%
+    margin-top: 10px
+    transform: translateX(-70%)
 
 .footer-tile:first-child 
-    margin-top: 15px
+    margin-top: 25px
 
 .footer-tile__p
     font-size: 18px
@@ -590,7 +597,9 @@ $bgcolor : #F0F0F0
     .tile-container__p
         width: 30ch
     
-
+    .footer-tile
+        left: 60%
+        transform: translateX(-50%)
 
 
 

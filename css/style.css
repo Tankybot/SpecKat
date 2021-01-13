@@ -208,7 +208,6 @@ body {
   padding: 20px;
   background-image: url(../images/back.jpg);
   margin: 0;
-  border-bottom: 2px solid lightsteelblue;
 }
 
 .banner__shadow {
@@ -222,7 +221,7 @@ body {
   z-index: 1;
 }
 
-.banner-wrapper__text {
+.banner__text {
   font-family: 'Black Ops One', cursive;
   color: black;
   font-size: 55px;
@@ -382,6 +381,7 @@ body {
 .heading-aboutus {
   margin-right: 0;
   margin-left: 0;
+  margin-top: 20px;
 }
 
 .heading-aboutus__heading {
@@ -653,6 +653,7 @@ body {
   background-image: url(../images/car.jpg);
   background-attachment: fixed;
   background-size: cover;
+  background-position-x: center;
   height: 100%;
 }
 
@@ -808,17 +809,23 @@ body {
   margin-top: 40px;
 }
 
+.footer {
+  background-color: #e9ecef;
+}
+
 .footer-tile {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  left: 45%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: 50%;
+  margin-top: 10px;
+  -webkit-transform: translateX(-70%);
+          transform: translateX(-70%);
 }
 
 .footer-tile:first-child {
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .footer-tile__p {
@@ -853,6 +860,11 @@ body {
   }
   .tile-container__p {
     width: 30ch;
+  }
+  .footer-tile {
+    left: 60%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,4 +9,22 @@
 .menu-wrapper {
   height: 85vh;
 }
+
+.footer-container-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-tile {
+  left: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 /*# sourceMappingURL=medium.css.map */
